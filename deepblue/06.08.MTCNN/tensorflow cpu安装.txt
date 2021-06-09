@@ -1,0 +1,38 @@
+tensorflow安装：gpu cpu
+
+查看conda版本（检验是否安装成功）
+conda --version
+
+查看已有环境
+conda info --envs
+
+查看可安装的python版本
+conda search --full-name python 
+
+选择想要安装的python版本创建对应的环境，–name后面的tensorflow即为环境名（可以随便取）
+conda create --name tensorflow python=3.x 
+
+激活（进入）已创建好的环境
+conda activate tensorflow
+
+查看一下本环境中所安装的python版本
+python --version
+
+查看对应python环境的可用tensorflow版本：
+conda search --full-name tensorflow 
+
+然后在环境中下载指定版本的tensorflow，可使用豆瓣源，巨快！！！
+pip install tensorflow-gpu==1.15.0 -i https://pypi.douban.com/simple
+pip install tensorflow==2.3.0 -i https://pypi.douban.com/simple
+
+验证安装情况，进入激活 tensorflow环境
+import tensorflow as tf
+
+安装CV2
+pip install -i https://pypi.douban.com/simple/ opencv-python
+keras
+matplotlib
+
+安装pytorch
+网址：https://pytorch.org/get-started/locally/
+conda install pytorch torchvision torchaudio cpuonly -c pytorch

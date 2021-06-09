@@ -1,0 +1,3 @@
+#!/bin/bash
+# CUDA_VISIBLE_DEVICES=2,3 OMP_NUM_THREADS=2 python -m torch.distributed.launch --nproc_per_node=2 --master_port=5558 train.py --batch_size=64 --dataset=COCO --name=coco_yolov5s --size=640 --epochs=300 --amp --about=YOLO_TOKEN_AAA
+CUDA_VISIBLE_DEVICES=2,3 OMP_NUM_THREADS=2 python -m torch.distributed.launch --nproc_per_node=2 --master_port=5558 train.py --batch_size=48 --dataset=COCO --name=coco_yolov5m2 --size=640 --epochs=300 --amp --about=YOLO_TOKEN_AAA --network=/datav/wish/yolov5/models/yolov5m.yaml
